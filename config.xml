@@ -10,6 +10,10 @@
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#77CC99" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="StatusBarDefaultScrollToTop" value="false" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -23,6 +27,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.3" />
     <engine name="android" spec="^7.1.4" />
     <engine name="browser" spec="^5.0.4" />
     <engine name="ios" spec="^5.1.1" />
