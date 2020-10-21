@@ -64,10 +64,11 @@ router.post('/login',async ctx=>{
       msg:'',
       result:{
         token,
-        user_name:row['user_name'],
+        userName:row['user_name'],
         department:row['department'],
-        company_unit:row['company_unit'],
-        user_position:row['user_position']
+        companyUnit:row['company_unit'],
+        position:row['position'],
+        acceptOrderStatus:row['accept_order_status']
       }
     };
    }
@@ -77,6 +78,7 @@ router.post('/login',async ctx=>{
 
 //账号，token和账号类型进行检测是否登录
 router.post('/checkIsLogin',async ctx=>{
+  console.log(ctx.request)
   let {accountId, token,accountType}=ctx.request.body;
   console.log(ctx.request.body)
   let rows =  await ctx.db.query("SELECT * FROM t_b_user_info WHERE account_id=? and account_type=?",[accountId,accountType])
@@ -100,13 +102,60 @@ router.post('/checkIsLogin',async ctx=>{
       msg:'',
       result:{
         token,
-        user_name:row['user_name'],
+        userName:row['user_name'],
         department:row['department'],
-        company_unit:row['company_unit'],
-        user_position:row['user_position']
+        companyUnit:row['company_unit'],
+        position:row['position'],
+        acceptOrderStatus:row['accept_order_status']
       }
     };
    }
    return
 })
+
+//验证登录
+const  fetchAuth =async(ctx)=>{
+  try{
+  let {accountid, token,accounttype}=ctx.request.header;
+  let rows =  await ctx.db.query("SELECT * FROM t_b_user_info WHERE account_id=? and account_type=?",[accountid,accounttype])
+  if(rows.length===0){
+    return ({err:'1',msg:'用户名不存在',result:''});
+  }
+  let row = rows[0];
+  console.log(row['token_expires'],Math.floor(Date.now()/1000))
+	 if(row['token'] != token){
+		 return {err:'1',msg:'没登录，拒绝访问',result:''};
+	 }else if(row['token_expires']<Math.floor(Date.now()/1000)){
+    return( {err:'1',msg:'登录已经过期',result:''});
+  }else{
+    //如果是登录状态则延期登录有效期
+		let token_expires=Math.floor(Math.floor(Date.now()/1000)+config.TOKEN_AGE)
+		 await ctx.db.query('UPDATE t_b_user_info SET token_expires=? where account_id=? and account_type=?',[token_expires,accountid,accounttype]);
+     return ({  err:'0', msg:'',  result:''});
+   }
+  }catch(err){
+    console.log(err)
+  }
+}
+router.post('/setAcceptOrderStatus',async ctx=>{
+  try{
+    console.log(ctx)
+    let loginFlagData = await fetchAuth(ctx)
+    if(loginFlagData.err==='0'){
+      let {acceptOrderStatus}=ctx.request.body;
+      console.log(acceptOrderStatus)
+      let {token}=ctx.request.header;
+      await ctx.db.query('UPDATE t_b_user_info SET accept_order_status=? where token=? ',[acceptOrderStatus,token]);
+      ctx.body= {  err:'0', msg:'',  result:acceptOrderStatus};
+      console.log('结束了')
+    }else{
+      ctx.body= loginFlagData
+    }
+    return
+  }catch(err){
+    console.log(err)
+  }
+
+})
+
 server.use(router.routes());
