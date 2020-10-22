@@ -45,7 +45,6 @@ router.get('/sdahga', async ctx=>{
 //根据账号和密码还有账号类型进行登录
 router.post('/login',async ctx=>{
   let {accountId, password,accountType}=ctx.request.body;
-  console.log(ctx.request.body)
   let rows =  await ctx.db.query("SELECT * FROM t_b_user_info WHERE account_id=? and account_type=?",[accountId,accountType])
   if(rows.length===0){
     ctx.body={err:'1',msg:'用户名不存在',result:''};
@@ -58,7 +57,6 @@ router.post('/login',async ctx=>{
     let token= guid().replace(/\-/g,'');
 		let token_expires=Math.floor(Math.floor(Date.now()/1000)+config.TOKEN_AGE)
 		 await ctx.db.query('UPDATE t_b_user_info SET token=?,token_expires=? where account_id=? and account_type=?',[token,token_expires,accountId,accountType]);
-     console.log(row)
      ctx.body={
       err:'0',
       msg:'',
@@ -74,29 +72,14 @@ router.post('/login',async ctx=>{
    }
    return
 })
-
 
 //账号，token和账号类型进行检测是否登录
-router.post('/checkIsLogin',async ctx=>{
-  console.log(ctx.request)
-  let {accountId, token,accountType}=ctx.request.body;
-  console.log(ctx.request.body)
-  let rows =  await ctx.db.query("SELECT * FROM t_b_user_info WHERE account_id=? and account_type=?",[accountId,accountType])
-  if(rows.length===0){
-    ctx.body={err:'1',msg:'用户名不存在',result:''};
-    return
-  }
-  let row = rows[0];
-  console.log(row['token_expires'],Math.floor(Date.now()/1000))
-	 if(row['token'] != token){
-		 ctx.body={err:'1',msg:'没登录',result:''};
-	 }else if(row['token_expires']<Math.floor(Date.now()/1000)){
-    ctx.body={err:'1',msg:'登录已经过期',result:''};
-  }else{
+router.get('/checkIsLogin',async ctx=>{
+  let loginFlagData = await fetchAuth(ctx)
+  if(loginFlagData.err==='0'){
+    let row = loginFlagData.result
     let token= guid().replace(/\-/g,'');
-		let token_expires=Math.floor(Math.floor(Date.now()/1000)+config.TOKEN_AGE)
-		 await ctx.db.query('UPDATE t_b_user_info SET token=?,token_expires=? where account_id=? and account_type=?',[token,token_expires,accountId,accountType]);
-     console.log(row)
+		 await ctx.db.query('UPDATE t_b_user_info SET token=? where account_id=? and account_type=?',[token,row['account_id'],row['account_type']]);
      ctx.body={
       err:'0',
       msg:'',
@@ -109,9 +92,29 @@ router.post('/checkIsLogin',async ctx=>{
         acceptOrderStatus:row['accept_order_status']
       }
     };
-   }
-   return
+  }else{
+    ctx.body= loginFlagData
+  }
+  return
 })
+//外勤人员设置接单的值
+router.post('/setAcceptOrderStatus',async ctx=>{
+  try{
+    let loginFlagData = await fetchAuth(ctx)
+    if(loginFlagData.err==='0'){
+      let {acceptOrderStatus}=ctx.request.body;
+      let {token}=ctx.request.header;
+      await ctx.db.query('UPDATE t_b_user_info SET accept_order_status=? where token=? ',[acceptOrderStatus,token]);
+      ctx.body= {  err:'0', msg:'',  result:acceptOrderStatus};
+    }else{
+      ctx.body= loginFlagData
+    }
+    return
+  }catch(err){
+    console.log(err)
+  }
+})
+server.use(router.routes());
 
 //验证登录
 const  fetchAuth =async(ctx)=>{
@@ -122,7 +125,6 @@ const  fetchAuth =async(ctx)=>{
     return ({err:'1',msg:'用户名不存在',result:''});
   }
   let row = rows[0];
-  console.log(row['token_expires'],Math.floor(Date.now()/1000))
 	 if(row['token'] != token){
 		 return {err:'1',msg:'没登录，拒绝访问',result:''};
 	 }else if(row['token_expires']<Math.floor(Date.now()/1000)){
@@ -131,31 +133,9 @@ const  fetchAuth =async(ctx)=>{
     //如果是登录状态则延期登录有效期
 		let token_expires=Math.floor(Math.floor(Date.now()/1000)+config.TOKEN_AGE)
 		 await ctx.db.query('UPDATE t_b_user_info SET token_expires=? where account_id=? and account_type=?',[token_expires,accountid,accounttype]);
-     return ({  err:'0', msg:'',  result:''});
+     return ({  err:'0', msg:'',  result:row});
    }
   }catch(err){
     console.log(err)
   }
 }
-router.post('/setAcceptOrderStatus',async ctx=>{
-  try{
-    console.log(ctx)
-    let loginFlagData = await fetchAuth(ctx)
-    if(loginFlagData.err==='0'){
-      let {acceptOrderStatus}=ctx.request.body;
-      console.log(acceptOrderStatus)
-      let {token}=ctx.request.header;
-      await ctx.db.query('UPDATE t_b_user_info SET accept_order_status=? where token=? ',[acceptOrderStatus,token]);
-      ctx.body= {  err:'0', msg:'',  result:acceptOrderStatus};
-      console.log('结束了')
-    }else{
-      ctx.body= loginFlagData
-    }
-    return
-  }catch(err){
-    console.log(err)
-  }
-
-})
-
-server.use(router.routes());
