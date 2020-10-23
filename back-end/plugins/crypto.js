@@ -13,8 +13,8 @@ function decrypt(data) {
   var dec = decipher.update(data, 'hex', 'utf8');
   dec += decipher.final('utf8');
   return dec
-
 }
+
 module.exports={encrypt,decrypt}
 
 

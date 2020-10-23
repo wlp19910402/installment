@@ -4,14 +4,6 @@ const {getToken,fetchTokenVerify} = require('../../plugins/token')
 const {encrypt,decrypt}=require('../../plugins/crypto')
 //创建router
 let router=new Router();
-router.get('/sdahga', async ctx=>{
-  let rows=await ctx.db.query("SELECT * FROM t_b_user_info");
-  ctx.body={
-    error: 0,
-    data: rows
-  };
-  return
-});
 
 //根据账号和密码还有账号类型进行登录
 router.post('/login',async ctx=>{
@@ -50,7 +42,6 @@ router.post('/login',async ctx=>{
 //账号，token和账号类型进行检测是否登录
 router.get('/checkIsLogin',async ctx=>{
   let loginFlagData = await fetchTokenVerify(ctx) //验证账号是否是登录状态。是登录状态则返回用户的基本信息
-  console.log(loginFlagData)
   if(loginFlagData.err==='0'){
     let row = loginFlagData.result
      ctx.body={
@@ -86,6 +77,48 @@ router.get('/refreshToken',async ctx=>{
     };
   }else{
     ctx.body= loginFlagData
+  }
+  return
+})
+
+//重置密码
+router.post('/updatePwd',async ctx=>{
+  let loginFlagData = await fetchTokenVerify(ctx) //验证账号是否是登录状态。是登录状态则返回用户的基本信息
+  if(loginFlagData.err!=='0'){
+    ctx.body= loginFlagData
+    return
+  }
+  try{
+    let {accountid,accounttype}=ctx.request.header;
+    let {oldPwd, newPwd1,newPwd2}=ctx.request.body;
+    if(!oldPwd||!newPwd1||!newPwd2){
+      ctx.body={err:'1',msg:'密码不能为空',result:''};
+    }
+    if(newPwd1!==newPwd2){
+      ctx.body={err:'1',msg:'两次密码不相等',result:''};
+      return
+    }
+    if(newPwd1.length<6){
+      ctx.body={err:'1',msg:'密码长度不能小于6',result:''};
+      return
+    }
+    let rows =  await ctx.db.query("SELECT * FROM t_b_user_info WHERE account_id=? and account_type=?",[accountid,accounttype])
+    if(rows.length===0){
+      ctx.body={err:'1',msg:'用户名不存在',result:''};
+      return
+    }
+    let row = rows[0];
+    if(decrypt(row['pwd']) != oldPwd){
+      ctx.body={err:'1',msg:'老密码输入不正确',result:''};
+    }else{
+      await ctx.db.query('UPDATE t_b_user_info SET pwd=? where account_id=? and account_type=?',[encrypt(newPwd1),accountid,accounttype]);
+      ctx.body={
+        err:'0',
+        msg:'',
+        result:''
+      };
+    }}catch(err){
+    console.log(err)
   }
   return
 })
