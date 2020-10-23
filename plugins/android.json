@@ -12,7 +12,21 @@
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.example.installment"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.example.installment"
+    }
+  }
 }
