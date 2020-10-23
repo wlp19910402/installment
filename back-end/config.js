@@ -7,5 +7,6 @@ module.exports={
   DB_BASE:'installment',//数据库的名称
 
   HTTP_PORT:'8080',//服务监听的端口
-  TOKEN_AGE:10*60, //登录有效期是十分钟
+  TOKEN_AGE:"1h", //登录有效期是1小时 =>1h,或者 2days
+  TOKEN_SECRET:"￥&637128$#2&daiugang++3+d=danghang&",//对token进行盐的参数
 }

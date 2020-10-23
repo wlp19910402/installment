@@ -1,9 +1,6 @@
 
 const Router=require('koa-router');
-const guid = require('uuid/v4');
-const config = require('../../config');
-const {fetchAuth}= require('../../plugins/admin')
-
+const {getToken,fetchTokenVerify} = require('../../plugins/token')
 //创建router
 let router=new Router();
 router.get('/sdahga', async ctx=>{
@@ -28,9 +25,8 @@ router.post('/login',async ctx=>{
     if(row['pwd'] != password){
       ctx.body={err:'1',msg:'密码错误',result:''};
     }else{
-      let token= guid().replace(/\-/g,'');
-      let token_expires=Math.floor(Math.floor(Date.now()/1000)+config.TOKEN_AGE)
-      await ctx.db.query('UPDATE t_b_user_info SET token=?,token_expires=? where account_id=? and account_type=?',[token,token_expires,accountId,accountType]);
+      let token = getToken({accountid:accountId,accounttype:accountType})
+      await ctx.db.query('UPDATE t_b_user_info SET token=? where account_id=? and account_type=?',[token,accountId,accountType]);
       ctx.body={
         err:'0',
         msg:'',
@@ -52,21 +48,39 @@ router.post('/login',async ctx=>{
 
 //账号，token和账号类型进行检测是否登录
 router.get('/checkIsLogin',async ctx=>{
-  let loginFlagData = await fetchAuth(ctx)
+  let loginFlagData = await fetchTokenVerify(ctx) //验证账号是否是登录状态。是登录状态则返回用户的基本信息
+  console.log(loginFlagData)
   if(loginFlagData.err==='0'){
     let row = loginFlagData.result
-    let token= guid().replace(/\-/g,'');
-		 await ctx.db.query('UPDATE t_b_user_info SET token=? where account_id=? and account_type=?',[token,row['account_id'],row['account_type']]);
      ctx.body={
       err:'0',
       msg:'',
       result:{
-        token,
         userName:row['user_name'],
         department:row['department'],
         companyUnit:row['company_unit'],
         position:row['position'],
         acceptOrderStatus:row['accept_order_status']
+      }
+    };
+  }else{
+    ctx.body= loginFlagData
+  }
+  return
+})
+
+//账号，token和账号类型进行检测是否登录
+router.get('/refreshToken',async ctx=>{
+  let loginFlagData = await fetchTokenVerify(ctx)
+  if(loginFlagData.err==='0'){
+    let row = loginFlagData.result
+    let token = getToken({accountid:row['account_id'],accounttype:row['account_type']})
+		 await ctx.db.query('UPDATE t_b_user_info SET token=? where account_id=? and account_type=?',[token,row['account_id'],row['account_type']]);
+     ctx.body={
+      err:'0',
+      msg:'',
+      result:{
+        token
       }
     };
   }else{

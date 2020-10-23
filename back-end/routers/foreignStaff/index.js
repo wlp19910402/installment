@@ -1,12 +1,12 @@
 const Router=require('koa-router');
-const {fetchAuth}= require('../../plugins/admin')
-const config = require('../../config');
+const {fetchTokenVerify}= require('../../plugins/token')
+
 //创建router
 let router=new Router();
 //外勤人员设置接单的值
 router.post('/setAcceptOrderStatus',async ctx=>{
   try{
-    let loginFlagData = await fetchAuth(ctx)
+    let loginFlagData = await fetchTokenVerify(ctx)
     if(loginFlagData.err==='0'){
       let {acceptOrderStatus}=ctx.request.body;
       let {token}=ctx.request.header;

@@ -3,7 +3,6 @@
 //创建router
 let router=new Router();
 router.get('*', async (ctx, next)=>{
-  console.log(ctx)
   try{
     await next();
   }catch(e){
