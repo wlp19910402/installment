@@ -1,6 +1,7 @@
 
 const Router=require('koa-router');
 const {getToken,fetchTokenVerify} = require('../../plugins/token')
+const {encrypt,decrypt}=require('../../plugins/crypto')
 //创建router
 let router=new Router();
 router.get('/sdahga', async ctx=>{
@@ -22,7 +23,7 @@ router.post('/login',async ctx=>{
       return
     }
     let row = rows[0];
-    if(row['pwd'] != password){
+    if(decrypt(row['pwd']) != password){
       ctx.body={err:'1',msg:'密码错误',result:''};
     }else{
       let token = getToken({accountid:accountId,accounttype:accountType})
