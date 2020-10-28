@@ -66,7 +66,7 @@ router.get('/refreshToken',async ctx=>{
   let loginFlagData = await fetchTokenVerify(ctx)
   if(loginFlagData.err==='0'){
     let row = loginFlagData.result
-    let token = getToken({accountid:row['account_id'],accounttype:row['account_type']})
+    let token = getToken({ accountid: row[ 'account_id' ], accounttype: row[ 'account_type' ] })
 		 await ctx.db.query('UPDATE t_b_user_info SET token=? where account_id=? and account_type=?',[token,row['account_id'],row['account_type']]);
      ctx.body={
       err:'0',
