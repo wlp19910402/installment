@@ -11,10 +11,10 @@ INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/a
 	android:name
 		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:12:127-180
 manifest
-ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-27:12
 MERGED from [com.android.support:support-v4:27.1.1] /Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/62c092e7d593241046f3952ae0416011/AndroidManifest.xml:17:1-22:12
 MERGED from [:CordovaLib] /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
 MERGED from [com.android.support:support-media-compat:27.1.1] /Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6b47d720a5cf11fe9af884968ec0c417/AndroidManifest.xml:17:1-22:12
@@ -26,9 +26,9 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/wlp6897/.gradle/caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/wlp6897/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/c1e0325b06d5ad9ed42db64894b221d9/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/wlp6897/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/b6e04d2030a8cbff8cd1532f3adf4879/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /Users/wlp6897/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e19e9962a0236400cd84fef0e53cb00b/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
-INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:1-27:12
 	package
 		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:2:102-135
 		INJECTED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml
@@ -147,6 +147,30 @@ uses-permission#android.permission.READ_PHONE_STATE
 ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:20:5-75
 	android:name
 		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:20:22-72
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:21:5-81
+	android:name
+		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:21:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:22:22-76
+uses-feature#android.hardware.location.gps
+ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:23:5-66
+	android:name
+		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:23:19-63
+uses-permission#android.permission.RECORD_VIDEO
+ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:24:5-71
+	android:name
+		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:24:22-68
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:25:5-80
+	android:name
+		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:25:22-77
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:26:22-76
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from /Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/AndroidManifest.xml:13:13-123
 	android:resource

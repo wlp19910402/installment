@@ -21,6 +21,15 @@
     },
     "cordova-plugin-media": {
       "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.example.installment"
     }
   },
   "dependent_plugins": {

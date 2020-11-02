@@ -42,6 +42,7 @@ router.post('/login',async ctx=>{
 //账号，token和账号类型进行检测是否登录
 router.get('/checkIsLogin',async ctx=>{
   let loginFlagData = await fetchTokenVerify(ctx) //验证账号是否是登录状态。是登录状态则返回用户的基本信息
+  console.log(loginFlagData)
   if(loginFlagData.err==='0'){
     let row = loginFlagData.result
      ctx.body={

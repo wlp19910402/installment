@@ -8,6 +8,7 @@
 /platforms
 # testing
 /coverage
+/plugins
 
 # production
 /build
