@@ -17,13 +17,17 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "com.lampa.startapp": "git+https://github.com/lampaa/com.lampa.startapp.git",
     "cordova-android": "^7.1.4",
     "cordova-browser": "^5.0.4",
-    "cordova-ios": "^5.1.1",
+    "cordova-ios": "^4.5.5",
+    "cordova-plugin-appavailability": "^0.4.2",
     "cordova-plugin-camera": "^4.1.0",
+    "cordova-plugin-device": "^2.0.3",
     "cordova-plugin-dialogs": "^2.0.2",
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-geolocation": "^4.0.2",
+    "cordova-plugin-inappbrowser": "^4.0.0",
     "cordova-plugin-media": "^5.0.3",
     "cordova-plugin-media-capture": "^3.0.3",
     "cordova-plugin-network-information": "^2.0.2",
@@ -43,7 +47,11 @@
       },
       "cordova-plugin-geolocation": {},
       "cordova-plugin-media-capture": {},
-      "cordova-plugin-network-information": {}
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-appavailability": {},
+      "com.lampa.startapp": {},
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "android",

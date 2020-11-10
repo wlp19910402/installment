@@ -31,6 +31,9 @@
         <icon density="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
         <icon density="xxhdpi" src="res/icon/android/icon-144-xxhdpi.png" />
         <icon density="xxxhdpi" src="res/icon/android/icon-196-xxxhdpi.png" />
+        <allow-intent href="androidamap://*/*" />
+        <allow-intent href="bdapp://*/*" />
+        <allow-intent href="qqmap://*/*" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -63,7 +66,11 @@
     <plugin name="cordova-plugin-geolocation" spec="^4.0.2" />
     <plugin name="cordova-plugin-media-capture" spec="^3.0.3" />
     <plugin name="cordova-plugin-network-information" spec="^2.0.2" />
+    <plugin name="cordova-plugin-device" spec="^2.0.3" />
+    <plugin name="com.lampa.startapp" spec="https://github.com/lampaa/com.lampa.startapp.git" />
     <engine name="android" spec="^7.1.4" />
     <engine name="browser" spec="^5.0.4" />
-    <engine name="ios" spec="^5.1.1" />
+    <engine name="ios" spec="^4.5.5" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^4.0.0" />
+    <plugin name="cordova-plugin-appavailability" spec="^0.4.2" />
 </widget>

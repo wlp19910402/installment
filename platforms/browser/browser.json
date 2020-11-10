@@ -11,6 +11,10 @@
             {
               "xml": "<feature name=\"Camera\"><param name=\"browser-package\" value=\"Camera\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"browser-package\" value=\"Device\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -55,6 +59,18 @@
       "PACKAGE_NAME": "com.example.installment"
     },
     "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-appavailability": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "com.lampa.startapp": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example.installment"
     }
   },
@@ -413,6 +429,50 @@
       "id": "cordova-plugin-network-information.NetworkInfoProxy",
       "pluginId": "cordova-plugin-network-information",
       "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "id": "cordova-plugin-device.device",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+      "id": "cordova-plugin-device.DeviceProxy",
+      "pluginId": "cordova-plugin-device",
+      "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-appavailability/www/AppAvailability.js",
+      "id": "cordova-plugin-appavailability.AppAvailability",
+      "pluginId": "cordova-plugin-appavailability",
+      "clobbers": [
+        "appAvailability"
+      ]
+    },
+    {
+      "file": "plugins/com.lampa.startapp/www/startApp.js",
+      "id": "com.lampa.startapp.startapp",
+      "pluginId": "com.lampa.startapp",
+      "merges": [
+        "startApp"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-inappbrowser/src/browser/InAppBrowserProxy.js",
+      "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "runs": true
     }
   ],
   "plugin_metadata": {
@@ -424,6 +484,10 @@
     "cordova-plugin-media": "5.0.3",
     "cordova-plugin-geolocation": "4.0.2",
     "cordova-plugin-media-capture": "3.0.3",
-    "cordova-plugin-network-information": "2.0.2"
+    "cordova-plugin-network-information": "2.0.2",
+    "cordova-plugin-device": "2.0.3",
+    "cordova-plugin-appavailability": "0.4.2",
+    "com.lampa.startapp": "6.1.6",
+    "cordova-plugin-inappbrowser": "4.0.0"
   }
 }

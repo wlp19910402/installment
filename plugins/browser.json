@@ -30,6 +30,18 @@
     },
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-appavailability": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "com.lampa.startapp": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.example.installment"
     }
   },
   "dependent_plugins": {

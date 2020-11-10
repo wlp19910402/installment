@@ -343,6 +343,38 @@ module.exports = [
     "clobbers": [
       "Connection"
     ]
+  },
+  {
+    "id": "cordova-plugin-device.device",
+    "file": "plugins/cordova-plugin-device/www/device.js",
+    "pluginId": "cordova-plugin-device",
+    "clobbers": [
+      "device"
+    ]
+  },
+  {
+    "id": "cordova-plugin-appavailability.AppAvailability",
+    "file": "plugins/cordova-plugin-appavailability/www/AppAvailability.js",
+    "pluginId": "cordova-plugin-appavailability",
+    "clobbers": [
+      "appAvailability"
+    ]
+  },
+  {
+    "id": "com.lampa.startapp.startapp",
+    "file": "plugins/com.lampa.startapp/www/startApp.js",
+    "pluginId": "com.lampa.startapp",
+    "merges": [
+      "startApp"
+    ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -356,7 +388,11 @@ module.exports.metadata =
   "cordova-plugin-media": "5.0.3",
   "cordova-plugin-geolocation": "4.0.2",
   "cordova-plugin-media-capture": "3.0.3",
-  "cordova-plugin-network-information": "2.0.2"
+  "cordova-plugin-network-information": "2.0.2",
+  "cordova-plugin-device": "2.0.3",
+  "cordova-plugin-appavailability": "0.4.2",
+  "com.lampa.startapp": "6.1.6",
+  "cordova-plugin-inappbrowser": "4.0.0"
 };
 // BOTTOM OF METADATA
 });

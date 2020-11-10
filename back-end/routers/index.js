@@ -12,6 +12,6 @@ router.get('*', async (ctx, next)=>{
 });
 
 router.use('/admin', require('./admin'));
-router.use('/foreignStaff', require('./foreignStaff'));
+router.use('/performStaff', require('./performStaff'));
 
 module.exports=router.routes();
