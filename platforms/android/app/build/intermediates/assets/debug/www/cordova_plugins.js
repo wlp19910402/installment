@@ -367,6 +367,14 @@ module.exports = [
     "merges": [
       "startApp"
     ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -383,7 +391,8 @@ module.exports.metadata =
   "cordova-plugin-network-information": "2.0.2",
   "cordova-plugin-device": "2.0.3",
   "cordova-plugin-appavailability": "0.4.2",
-  "com.lampa.startapp": "6.1.6"
+  "com.lampa.startapp": "6.1.6",
+  "cordova-plugin-inappbrowser": "4.0.0"
 };
 // BOTTOM OF METADATA
 });

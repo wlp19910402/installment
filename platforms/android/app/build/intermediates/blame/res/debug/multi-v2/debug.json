@@ -1,21 +1,6 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/values-sv_values-sv.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/values-sv/values-sv.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/values-ur_values-ur.arsc.flat",
             "map": [
                 {
@@ -31,10 +16,25 @@
             ]
         },
         {
-            "outputFile": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/values-eu_values-eu.arsc.flat",
+            "outputFile": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/values-sv_values-sv.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/values-eu/values-eu.xml",
+                    "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/values-sv/values-sv.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/values-el/values-el.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -61,10 +61,10 @@
             ]
         },
         {
-            "outputFile": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat",
+            "outputFile": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/values-eu_values-eu.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/values-el/values-el.xml",
+                    "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/values-eu/values-eu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
