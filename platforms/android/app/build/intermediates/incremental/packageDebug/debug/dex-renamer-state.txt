@@ -1,4 +1,4 @@
-#Thu Nov 12 16:32:00 CST 2020
+#Thu Nov 19 10:11:14 CST 2020
 base.0=/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
