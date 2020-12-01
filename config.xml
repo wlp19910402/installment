@@ -70,6 +70,10 @@
     <plugin name="com.lampa.startapp" spec="https://github.com/lampaa/com.lampa.startapp.git" />
     <plugin name="cordova-plugin-inappbrowser" spec="^4.0.0" />
     <plugin name="cordova-plugin-appavailability" spec="^0.4.2" />
+    <plugin name="jpush-phonegap-plugin" spec="^3.7.6">
+        <variable name="APP_KEY" value="26e38b0235311fa7d833aca0" />
+        <variable name="CHANNEL" value="developer-default" />
+    </plugin>
     <engine name="android" spec="^7.1.4" />
     <engine name="browser" spec="^5.0.4" />
     <engine name="ios" spec="^4.5.5" />

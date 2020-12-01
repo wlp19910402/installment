@@ -379,6 +379,14 @@ module.exports = [
     "clobbers": [
       "cordova.InAppBrowser.open"
     ]
+  },
+  {
+    "id": "jpush-phonegap-plugin.JPushPlugin",
+    "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+    "pluginId": "jpush-phonegap-plugin",
+    "clobbers": [
+      "JPush"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -396,7 +404,9 @@ module.exports.metadata =
   "cordova-plugin-network-information": "2.0.2",
   "cordova-plugin-statusbar": "2.4.3",
   "cordova-plugin-whitelist": "1.3.4",
-  "cordova-plugin-inappbrowser": "4.0.0"
+  "cordova-plugin-inappbrowser": "4.0.0",
+  "cordova-plugin-jcore": "1.3.3",
+  "jpush-phonegap-plugin": "3.7.6"
 };
 // BOTTOM OF METADATA
 });

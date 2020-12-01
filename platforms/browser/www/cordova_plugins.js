@@ -397,6 +397,14 @@ module.exports = [
         "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
         "pluginId": "cordova-plugin-inappbrowser",
         "runs": true
+    },
+    {
+        "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+        "id": "jpush-phonegap-plugin.JPushPlugin",
+        "pluginId": "jpush-phonegap-plugin",
+        "clobbers": [
+            "JPush"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -414,7 +422,9 @@ module.exports.metadata =
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-appavailability": "0.4.2",
     "com.lampa.startapp": "6.1.6",
-    "cordova-plugin-inappbrowser": "4.0.0"
+    "cordova-plugin-inappbrowser": "4.0.0",
+    "cordova-plugin-jcore": "1.3.3",
+    "jpush-phonegap-plugin": "3.7.6"
 }
 // BOTTOM OF METADATA
 });

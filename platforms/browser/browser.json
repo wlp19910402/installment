@@ -72,6 +72,14 @@
     },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-jcore": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "jpush-phonegap-plugin": {
+      "APP_KEY": "26e38b0235311fa7d833aca0",
+      "CHANNEL": "developer-default",
+      "PACKAGE_NAME": "com.example.installment"
     }
   },
   "dependent_plugins": {},
@@ -473,6 +481,14 @@
       "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
       "pluginId": "cordova-plugin-inappbrowser",
       "runs": true
+    },
+    {
+      "file": "plugins/jpush-phonegap-plugin/www/JPushPlugin.js",
+      "id": "jpush-phonegap-plugin.JPushPlugin",
+      "pluginId": "jpush-phonegap-plugin",
+      "clobbers": [
+        "JPush"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -488,6 +504,8 @@
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-appavailability": "0.4.2",
     "com.lampa.startapp": "6.1.6",
-    "cordova-plugin-inappbrowser": "4.0.0"
+    "cordova-plugin-inappbrowser": "4.0.0",
+    "cordova-plugin-jcore": "1.3.3",
+    "jpush-phonegap-plugin": "3.7.6"
   }
 }

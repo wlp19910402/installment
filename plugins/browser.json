@@ -42,10 +42,18 @@
     },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.example.installment"
+    },
+    "jpush-phonegap-plugin": {
+      "APP_KEY": "26e38b0235311fa7d833aca0",
+      "CHANNEL": "developer-default",
+      "PACKAGE_NAME": "com.example.installment"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.example.installment"
+    },
+    "cordova-plugin-jcore": {
       "PACKAGE_NAME": "com.example.installment"
     }
   }

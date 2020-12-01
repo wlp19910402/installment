@@ -43,6 +43,9 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
+    <feature name="JPushPlugin">
+        <param name="android-package" value="cn.jiguang.cordova.push.JPushPlugin" />
+    </feature>
     <name>装修分期</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

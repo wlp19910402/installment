@@ -4,24 +4,24 @@
         "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat",
-        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-port-xhdpi/screen.png"
-    },
-    {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
         "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-port-xhdpi/screen.png"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-mdpi_screen.png.flat",
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-port-mdpi/screen.png"
     },
     {
-        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
-        "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable-v21/notification_action_background.xml"
-    },
-    {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_remove.png.flat",
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_remove.png"
+    },
+    {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
+        "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable-v21/notification_action_background.xml"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_next_item.png.flat",
@@ -36,12 +36,16 @@
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-mdpi/ic_action_next_item.png"
     },
     {
-        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat",
-        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/mipmap-ldpi/icon.png"
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/layout-v21_push_notification.xml.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/layout-v21/push_notification.xml"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
         "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/6b47d720a5cf11fe9af884968ec0c417/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/mipmap-ldpi/icon.png"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/xml_config.xml.flat",
@@ -70,6 +74,10 @@
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
         "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/layout_jpush_popwin_layout.xml.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/layout/jpush_popwin_layout.xml"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_remove.png.flat",
@@ -132,6 +140,10 @@
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/mipmap-mdpi/icon.png"
     },
     {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi_jpush_ic_richpush_actionbar_back.png.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-hdpi/jpush_ic_richpush_actionbar_back.png"
+    },
+    {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-hdpi_screen.png.flat",
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-port-hdpi/screen.png"
     },
@@ -164,6 +176,10 @@
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_next_item.png"
     },
     {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/layout_push_notification.xml.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/layout/push_notification.xml"
+    },
+    {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat",
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/mipmap-xxxhdpi/icon.png"
     },
@@ -186,6 +202,10 @@
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
         "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
+    },
+    {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable_jpush_richpush_progressbar.xml.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable/jpush_richpush_progressbar.xml"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_action_previous_item.png.flat",
@@ -240,8 +260,16 @@
         "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi_jpush_ic_richpush_actionbar_divider.png.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable-hdpi/jpush_ic_richpush_actionbar_divider.png"
+    },
+    {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable_jpush_richpush_btn_selector.xml.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/drawable/jpush_richpush_btn_selector.xml"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
@@ -278,6 +306,10 @@
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/Users/wlp6897/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/476626f31f6ae174d03bfa2d6df13f34/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/layout_jpush_webview_layout.xml.flat",
+        "source": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/src/main/res/layout/jpush_webview_layout.xml"
     },
     {
         "merged": "/Users/wlp6897/newProjects/cordovaProjects/installment/platforms/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
